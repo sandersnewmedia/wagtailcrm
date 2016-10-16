@@ -10,6 +10,11 @@ Wagtail CRM
 
 Manages your contacts that you get in wagtail.
 
+You may need to run during development the following command when adding to your project
+
+`pip install -r requirements.txt --process-dependency-links  --allow-external --allow-unverified`
+
+
 Documentation
 -------------
 

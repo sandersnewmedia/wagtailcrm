@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
+import pip
+
+from pip.req import parse_requirements
 
 try:
     from setuptools import setup
@@ -42,12 +45,8 @@ setup(
         'wagtailcrm',
     ],
     include_package_data=True,
-    install_requires=[
-        "django-model-utils>=2.0"
-    ],
-    dependency_links=[
-        "git+git://github.com/mwcbrent/django-drip.git#egg=django-drip-0.1.0"
-    ],
+    install_requires=['django-model-utils>=2.0', 'django-drip==1.7.1'],
+    dependency_links=['https://github.com/mwcbrent/django-drip/tarball/master#egg=django-drip-1.7.1'],
     zip_safe=False,
     keywords='wagtailcrm',
     classifiers=[
