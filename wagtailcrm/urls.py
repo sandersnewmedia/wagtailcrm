@@ -7,27 +7,27 @@ from . import views
 urlpatterns = [
     url(
         regex="^contact/~create/$",
-        view=views.contactCreateView.as_view(),
+        view=views.ContactCreateView.as_view(),
         name='contact_create',
     ),
     url(
         regex="^contact/(?P<pk>\d+)/~delete/$",
-        view=views.contactDeleteView.as_view(),
+        view=views.ContactDeleteView.as_view(),
         name='contact_delete',
     ),
     url(
         regex="^contact/(?P<pk>\d+)/$",
-        view=views.contactDetailView.as_view(),
+        view=views.ContactDetailView.as_view(),
         name='contact_detail',
     ),
     url(
         regex="^contact/(?P<pk>\d+)/~update/$",
-        view=views.contactUpdateView.as_view(),
+        view=views.ContactUpdateView.as_view(),
         name='contact_update',
     ),
     url(
         regex="^contact/$",
-        view=views.contactListView.as_view(),
-        name='contact_list',
+        view=views.ContactListView.as_view(),
+        name='index',
     ),
 	]

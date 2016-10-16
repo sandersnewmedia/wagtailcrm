@@ -8,31 +8,31 @@ from django.views.generic import (
 )
 
 from .models import (
-	contact,
+	Contact,
 )
 
 
-class contactCreateView(CreateView):
+class ContactCreateView(CreateView):
 
-    model = contact
-
-
-class contactDeleteView(DeleteView):
-
-    model = contact
+    model = Contact
 
 
-class contactDetailView(DetailView):
+class ContactDeleteView(DeleteView):
 
-    model = contact
-
-
-class contactUpdateView(UpdateView):
-
-    model = contact
+    model = Contact
 
 
-class contactListView(ListView):
+class ContactDetailView(DetailView):
 
-    model = contact
+    model = Contact
+
+
+class ContactUpdateView(UpdateView):
+
+    model = Contact
+
+
+class ContactListView(ListView):
+
+    model = Contact
 
