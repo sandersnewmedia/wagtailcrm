@@ -42,7 +42,10 @@ setup(
         'wagtailcrm',
     ],
     include_package_data=True,
-    install_requires=["django-model-utils>=2.0",],
+    install_requires=[
+        "django-model-utils>=2.0",
+        "django-drip"
+    ],
     dependency_links=[
         "git+git://github.com/mwcbrent/django-drip.git#egg=django-drip"
     ],
