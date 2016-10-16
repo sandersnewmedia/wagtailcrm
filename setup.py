@@ -46,7 +46,7 @@ setup(
         "django-model-utils>=2.0"
     ],
     dependency_links=[
-        "git+git://github.com/mwcbrent/django-drip.git#egg=django-drip"
+        "git+git://github.com/mwcbrent/django-drip.git#egg=django-drip-0.1.0"
     ],
     zip_safe=False,
     keywords='wagtailcrm',
