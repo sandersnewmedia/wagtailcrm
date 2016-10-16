@@ -43,8 +43,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        "django-model-utils>=2.0",
-        "django-drip"
+        "django-model-utils>=2.0"
     ],
     dependency_links=[
         "git+git://github.com/mwcbrent/django-drip.git#egg=django-drip"
