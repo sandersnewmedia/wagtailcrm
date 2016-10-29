@@ -45,8 +45,7 @@ setup(
         'wagtailcrm',
     ],
     include_package_data=True,
-    install_requires=['django-model-utils>=2.0', 'django-drip==1.7.1'],
-    dependency_links=['https://github.com/mwcbrent/django-drip/tarball/master#egg=django-drip-1.7.1'],
+    install_requires=['django-model-utils>=2.0', 'requests==2.9.1'],
     zip_safe=False,
     keywords='wagtailcrm',
     classifiers=[

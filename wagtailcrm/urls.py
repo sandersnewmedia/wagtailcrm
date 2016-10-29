@@ -6,12 +6,12 @@ from . import views
 
 urlpatterns = [
     url(
-        regex="^contact/~create/$",
+        regex="^contact/create/$",
         view=views.ContactCreateView.as_view(),
         name='contact_create',
     ),
     url(
-        regex="^contact/(?P<pk>\d+)/~delete/$",
+        regex="^contact/(?P<pk>\d+)/delete/$",
         view=views.ContactDeleteView.as_view(),
         name='contact_delete',
     ),
@@ -21,7 +21,7 @@ urlpatterns = [
         name='contact_detail',
     ),
     url(
-        regex="^contact/(?P<pk>\d+)/~update/$",
+        regex="^contact/(?P<pk>\d+)/update/$",
         view=views.ContactUpdateView.as_view(),
         name='contact_update',
     ),
@@ -30,4 +30,4 @@ urlpatterns = [
         view=views.ContactListView.as_view(),
         name='index',
     ),
-	]
+]

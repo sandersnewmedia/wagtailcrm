@@ -1,6 +1,58 @@
 {% extends "wagtailadmin/base.html" %}
-{% load gravatar staticfiles i18n %}
+{% load wagtailadmin_tags staticfiles i18n %}
+{% block titletag %}{% blocktrans with title=parent_page.get_admin_display_title %}Exploring {{ title }}{% endblocktrans %}{% endblock %}
+{% block bodyclass %}page-explorer {% if ordering == 'ord' %}reordering{% endif %}{% endblock %}
 
 {% block content %}
-<h1>Foobar baz</h1>
+  <section id="header"><header class="nice-padding merged hasform">
+      <div class="row">
+        <div class="left">
+          <div class="col">
+            <h1 class="icon icon-">Contacts</h1>
+          </div>
+        </div>
+        <div class="right"></div>
+      </div>
+    </header>
+    <ul class="breadcrumb merged">
+      <li class="home"><a href="#" class="icon icon-home text-replace">Home</a></li>
+      <li><a href="#">Various</a></li>
+      <li><a href="#">Subpages</a></li>
+      <li><a href="#">There is a max length of this many</a></li>
+    </ul>
+  </section>
+
+
+  <section id="listings" class="nice-padding">
+    <h2>Listings</h2>
+    <table class="listing chooser">
+      <thead class="table-headers">
+      <tr>
+        <th class="title">Email</th>
+        <th>Phone</th>
+        <th>Last Contacted</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for contact in contact_list %}
+      <tr>
+        <td class="title">
+          <h2><a href="">{{ contact.email }}</a></h2>
+        </td>
+        <td>{{ contact.phone_number }}</td>
+        <td>{{ contact.last_contacted }}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </section>
+
+{% endblock %}
+
+{% block extra_js %}
+    {{ block.super }}
+
+  {% comment %} modal-workflow is required by the view restrictions interface {% endcomment %}
+  <script src="{% static 'wagtailadmin/js/modal-workflow.js' %}"></script>
+  <script src="{% static 'wagtailadmin/js/privacy-switch.js' %}"></script>
 {% endblock %}

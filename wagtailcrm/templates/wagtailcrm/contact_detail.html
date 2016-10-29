@@ -1,0 +1,13 @@
+{% extends "wagtailadmin/base.html" %}
+{% load i18n %}
+
+{% block titletag %}{{ view.page_title }} {{ view.get_page_subtitle }}{% endblock %}
+
+{% block content %}
+
+    {% include "wagtailadmin/shared/header.html" with title=view.page_title subtitle=view.get_page_subtitle icon=view.header_icon %}
+
+  <div class="nice-padding">
+      {% include "wagtailadmin/block_forms/field.html" with field=object %}
+  </div>
+{% endblock %}
